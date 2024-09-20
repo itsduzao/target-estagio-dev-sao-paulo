@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="./scripts/index.js" type="module" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>Desafio Técnico Target - Estágio Ribeirão Preto</title>
+</head>
+
+<body>
+  <div class="app-header">
+    <header>
+      <div class="app-header-container">
+        <div class="company-brand-container">
+          <img id="target-logo" src="assets/target-logo.png" alt="Target logo">
+        </div>
+        <div class="nav-container">
+          <nav class="question-links">
+            <div class="question-link-container"><button class="question-link btn">Q1</button></div>
+            <div class="question-link-container"><button class="question-link btn">Q2</button></div>
+            <div class="question-link-container"><button class="question-link btn">Q3</button></div>
+            <div class="question-link-container"><button class="question-link btn">Q4</button></div>
+            <div class="question-link-container"><button class="question-link btn">Q5</button></div>
+          </nav>
+        </div>
+        <button type="button" class="btn" id="repoRedirectButton" title="Github Page">
+            <a href="https://github.com/itsduzao/target-estagio-dev-ribeirao-preto">
+              <svg id="github-logo" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentcolor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268"
+                  stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="currentcolor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+        </button>
+      </div>
+    </header>
+  </div>
+  <div class="app-container">
+    <main>
+      <h1>Estágio em Desenvolvimento - Ribeirão Preto</h1>
+      <h2>Desafio Técnico</h2>
+      <div class="initial-content">
+        <p>Olá, pessoa recrutadora! Fiz esse site inspirado no layout da Gupy para facilitar a navegação aos conteúdos
+          do desafio técnico. Espero que goste do pequeno projeto que fiz com carinho.</p>
+      </div>
+      <section class="questions">
+            <div class="question-container hidden">
+              <div class="question-statement">
+                <p>Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2
+                  valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que
+                  desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem
+                  avisando se o número informado pertence ou não a sequência.</p>
+              </div>
+              <div class="question-interaction-container">
+                <div class="input-wrapper">
+                  <label for="fibonacciInput">Insira um número</label>
+                  <input class="input-field" type="number" min="0" oninput="validity.valid||(value='');" name="fibonacciInput"
+                    id="fibonacciInput" class="inputNumber">
+                </div>
+                <button class="btn btn-gupy" type="button" id="fibonacciButton">Verificar</button>
+              </div>
+              <div class="output-wrapper hidden">
+                <div class="output-text"><span id="fibonacciOutput"></span></div>
+              </div>
+            </div>
+            <div class="question-container hidden">
+              <div class="question-statement">
+                <p>Escreva um programa que verifique, em uma string, a existência da letra "a", seja maiúscula ou
+                  minúscula, além de informar a quantidade de vezes em que ela ocorre.</p>
+              </div>
+              <div class="question-interaction-container">
+                <div class="input-wrapper">
+                  <label for="containsLetterInput">Insira uma palavra</label>
+                  <input class="input-field" type="text" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"
+                    name="containsLetterInput" id="containsLetterInput">
+                </div>
+                <button class="btn btn-gupy" type="button" id="containsLetterButton">Verificar</button>
+              </div>
+              <div class="output-wrapper hidden">
+                <div class="output-text"><span id="containsLetterOutput"></span></div>
+              </div>
+            </div>
+            <div class="question-container hidden">
+              <div class="question-statement">
+                <p>Observe o trecho de código abaixo: int INDICE = 12, SOMA = 0, K = 1; enquanto K &lt; INDICE faça { K
+                  = K + 1; SOMA = SOMA + K; } imprimir(SOMA);</p>
+                <p>Ao final do processamento, qual será o valor da variável SOMA? </p>
+              </div>
+              <div class="question-interaction-container">
+                <div class="input-container">
+                  <div class="input-wrapper">
+                    <label for="indexInput">Índice</label>
+                    <input class="input-field inputNumber" type="number" min="0" oninput="validity.valid||(value='');" name="Índice" id="indexInput"
+                      value="12">
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="accumulatorInput">Soma</label>
+                    <input class="input-field inputNumber" type="number" min="0" oninput="validity.valid||(value='');" name="Soma" id="accumulatorInput"
+                      value="0">
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="countInput">K</label>
+                    <input class="input-field inputNumber" type="number" min="0" oninput="validity.valid||(value='');" name="K" id="countInput"
+                      value="1">
+                  </div>
+                </div>
+                <button class="btn btn-gupy" type="button" id="sumValuesUpToLimitButton">Verificar</button>
+              </div>
+              <div class="output-wrapper hidden">
+                <div class="output-text"><span id="sumValuesUpToLimitOutput"></span></div>
+              </div>
+            </div>
+            <div class="question-container hidden">
+              <div class="question-statement">
+                <p>Descubra a lógica e complete o próximo elemento:</p>
+              </div>
+              <ul class="upper-alpha-parentheses-list">
+                <li>1, 3, 5, 7, <strong>9</strong>.</li>
+                <li>2, 4, 8, 16, 32, 64, <strong>128</strong>.</li>
+                <li>0, 1, 4, 9, 16, 25, 36, <strong>49</strong>.</li>
+                <li>4, 16, 36, 64, <strong>100</strong>.</li>
+                <li>1, 1, 2, 3, 5, 8, <strong>13</strong>.</li>
+                <li>2, 10, 12, 16, 17, 18, 19, <strong>200</strong>.</li>
+              </ul>
+            </div>
+            <div class="question-container hidden">
+              <div class="question-statement">
+                <p>Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes.
+                  Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas
+                  vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para
+                  descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada
+                  lâmpada?</p>
+              </div>
+              <p><b>1ª manipulação de interruptores:</b> Inicialmente ligo o interruptor A, mantendo-o assim por alguns
+                minutos. Em seguida desligo o Interruptor A e ligo o interruptor B. Mantenho o interruptor C desligado.
+              </p>
+              <p><b>1ª visita:</b> Vou até a alguma sala aleatória e verifico a condição da lâmpada. Caso esteja apagada
+                porém quente, sei que é a lâmpada A. Se estiver acesa, será a lâmpada B. Do caso contrário será a
+                lâmpada C. </p>
+              <p><b>2ª manipulação de interruptores:</b> Após descobrir a qual interruptor pertence à primeira lâmpada,
+                desligo ambos interruptores restantes e em seguida mantenho apenas um deles ligado.</p>
+              <p><b>2ª visita:</b> Vou até uma das salas restantes e verifico se a lâmpada está acesa ou apagada,
+                identificando a qual interruptor pertence.</p>
+            </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
