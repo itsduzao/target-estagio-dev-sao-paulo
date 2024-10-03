@@ -277,19 +277,19 @@ input[type=number] {
   opacity: 0;
 }
 
-.upper-alpha-parentheses-list {
+.lower-alpha-parentheses-list {
   display: flex;
   flex-direction: column;
   gap: 2px;
   list-style-position: inside;
 }
 
-.upper-alpha-parentheses-list li {
+.lower-alpha-parentheses-list li {
   counter-increment: items;
 }
 
-.upper-alpha-parentheses-list li::marker {
-  content: counter(items, upper-alpha) ") ";
+.lower-alpha-parentheses-list li::marker {
+  content: counter(items, lower-alpha) ") ";
 }
 
 .btn {
