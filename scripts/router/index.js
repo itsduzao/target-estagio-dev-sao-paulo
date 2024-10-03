@@ -7,19 +7,25 @@ export function router() {
 
   function showContent(contentToShow) {
     if (contentToShow.classList.contains('hidden')) {
-      questions.forEach(q => q.classList.add('hidden'))
+      for (const q of questions) {
+        q.classList.add('hidden')
+      }
       initialContent.classList.add('hidden')
-      questionsOutput.forEach(qOutput => qOutput.classList.add('hidden'))
+      for (const qOutput of questionsOutput) {
+        qOutput.classList.add('hidden')
+      }
       contentToShow.classList.remove('hidden')
     }
   }
 
-  links.forEach(link => {
+  for (const link of links) {
     link.addEventListener('click', (e) => {
       e.preventDefault()
       const targetQuestion = e.target.textContent
 
-      links.forEach(l => l.classList.remove('active'))
+      for (const l of links) {
+        l.classList.remove('active')
+      }
       e.target.classList.add('active')
 
       const questionToShow = document.querySelector(`.question-container:nth-child(${targetQuestion.slice(1)})`)
@@ -27,10 +33,12 @@ export function router() {
         showContent(questionToShow)
       }
     })
-  })
+  }
 
   companyBrand.addEventListener('click', () => {
-    links.forEach(link => link.classList.remove('active'))
+    for (const link of links) {
+      link.classList.remove('active')
+    }
     showContent(initialContent)
   })
 }
