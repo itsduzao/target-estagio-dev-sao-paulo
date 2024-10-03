@@ -49,7 +49,7 @@
     <main>
       <h1>Estágio em Desenvolvimento - São Paulo</h1>
       <h2>Desafio Técnico</h2>
-      <div class="initial-content">
+      <div class="initial-content hidden">
         <p>Olá, pessoa recrutadora! Fiz esse site inspirado no layout da Gupy para facilitar a navegação aos conteúdos
           do desafio técnico. Espero que goste do pequeno projeto que fiz com carinho.</p>
       </div>
@@ -113,7 +113,7 @@
               <li>Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.</li>
             </ul>
             <p>IMPORTANTE:</p>
-            <ol class="upper-alpha-parentheses-list">
+            <ol class="lower-alpha-parentheses-list">
               <li>Usar o json ou xml disponível como fonte dos dados do faturamento mensal;</li>
               <li>Podem existir dias sem faturamento, como nos finais de semana e feriados. Estes dias devem ser
                 ignorados no cálculo da média;</li>
@@ -137,15 +137,27 @@
             </p>
           </div>
         </div>
-        <div class="question-container hidden">
+        <div class="question-container">
           <div class="question-statement">
             <p>Escreva um programa que inverta os caracteres de um string.</p>
             <p>IMPORTANTE:</p>
-            <ul class="upper-alpha-parentheses-list">
+            <ul class="lower-alpha-parentheses-list">
               <li>Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente
                 definida no código;</li>
               <li>Evite usar funções prontas, como, por exemplo, reverse;</li>
             </ul>
+            <div class="question-interaction-container">
+              <div class="input-wrapper">
+                <label for="revertStringInput">Insira uma palavra</label>
+                <input class="input-field" type="text" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"
+                  name="revertStringInput" id="revertStringInput">
+              </div>
+              <button class="btn btn-gupy" type="button" id="revertStringButton">Verificar</button>
+            </div>
+            <div class="output-wrapper hidden">
+              <div class="output-text"><span id="revertStringOutput"></span></div>
+            </div>
+          </div>
           </div>
         </div>
       </section>
