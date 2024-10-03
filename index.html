@@ -120,44 +120,49 @@
             </ol>
           </div>
         </div>
-        <div class="question-container hidden">
+        <div class="question-container">
           <div class="question-statement">
             <p>Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:</p>
-            <ul>
-              <li>SP &ndash; R$67.836,43</li>
-              <li>RJ &ndash; R$36.678,66</li>
-              <li>MG &ndash; R$29.229,88</li>
-              <li>ES &ndash; R$27.165,48</li>
-              <li>Outros &ndash; R$19.849,53</li>
+            <ul id="calculatePercentageList">
+              <li>SP - R$67.836,43</li>
+              <li>RJ - R$36.678,66</li>
+              <li>MG - R$29.229,88</li>
+              <li>ES - R$27.165,48</li>
+              <li>Outros - R$19.849,53</li>
             </ul>
             <p>
               Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado
-              teve
-              dentro do valor total mensal da distribuidora.
+              teve dentro do valor total mensal da distribuidora.
             </p>
           </div>
-        </div>
-        <div class="question-container">
-          <div class="question-statement">
-            <p>Escreva um programa que inverta os caracteres de um string.</p>
-            <p>IMPORTANTE:</p>
-            <ul class="lower-alpha-parentheses-list">
-              <li>Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente
-                definida no código;</li>
-              <li>Evite usar funções prontas, como, por exemplo, reverse;</li>
-            </ul>
-            <div class="question-interaction-container">
-              <div class="input-wrapper">
-                <label for="revertStringInput">Insira uma palavra</label>
-                <input class="input-field" type="text" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"
-                  name="revertStringInput" id="revertStringInput">
-              </div>
-              <button class="btn btn-gupy" type="button" id="revertStringButton">Verificar</button>
-            </div>
-            <div class="output-wrapper hidden">
-              <div class="output-text"><span id="revertStringOutput"></span></div>
-            </div>
+          <div class="question-interaction-container">
+            <button class="btn btn-gupy" type="button" id="calculatePercentageButton">Verificar</button>
           </div>
+          <div class="output-wrapper hidden">
+            <div class="output-text"><span id="percentageOutput"></span></div>
+          <div class="question-container hidden">
+            <div class="question-statement">
+              <p>Escreva um programa que inverta os caracteres de um string.</p>
+              <p>IMPORTANTE:</p>
+              <ul class="lower-alpha-parentheses-list">
+                <li>Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser
+                  previamente
+                  definida no código;</li>
+                <li>Evite usar funções prontas, como, por exemplo, reverse;</li>
+              </ul>
+              <div class="question-interaction-container">
+                <div class="input-wrapper">
+                  <label for="revertStringInput">Insira uma palavra</label>
+                  <input class="input-field" type="text"
+                    oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')" name="revertStringInput"
+                    id="revertStringInput">
+                </div>
+                <button class="btn btn-gupy" type="button" id="revertStringButton">Verificar</button>
+              </div>
+              <div class="output-wrapper hidden">
+                <div class="output-text"><span id="revertStringOutput"></span></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
