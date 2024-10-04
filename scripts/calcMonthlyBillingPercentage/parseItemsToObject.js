@@ -1,8 +1,8 @@
 export function parseItemsToObject(listItems) {
-  const billingData = {};
+  const RevenueData = {};
   for (const value of listItems) {
     const [key, val] = value.split('-');
-    billingData[key.trim()] = val.split('R$').join('').trim();
+    RevenueData[key.trim()] = val.split('R$').join('').trim();
   }
-  return billingData;
+  return RevenueData;
 }
