@@ -15,12 +15,21 @@ async function fetchData() {
 
 async function handler(){
   const data = await fetchData()
-  calcDailyRevenue(data)
+  const result = calcDailyRevenue(data)
+  console.log(result)
 }
 
 function calcDailyRevenue(data) {
   const validDays = data.filter(({valor}) => valor > 0)
-  console.log(validDays)
+  const lowestRevenue = validDays.find(({valor}) => valor === Math.min(...validDays.map(({valor}) => valor)))
+  const highestRevenue = validDays.find(({valor}) => valor === Math.max(...validDays.map(({valor}) => valor)))
+  const averageRevenue = validDays.reduce((acc, {valor}) => acc + valor, 0) / validDays.length
+  const daysAboveAverage = validDays.filter(({valor}) => valor > averageRevenue)
+  return {
+    lowestRevenue,
+    highestRevenue,
+    daysAboveAverage
+  }
 }
 
 handler()
