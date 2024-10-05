@@ -1,7 +1,7 @@
 import { calcMonthlyRevenuePercentage } from "./calcMonthlyRevenuePercentage.js"
 import { extractListItemsFromHTMLList } from './extractListItemsFromHTMLList.js';
 import { parseItemsToObject } from './parseItemsToObject.js';
-import { generateHTMLTable } from './generateHTMLTable.js';
+import { generateHTMLTable } from '../utils/generateHTMLTable.js';
 import { populateHTMLTable } from "./populateHTMLTable.js";
 import { showElement } from '../utils/showElement.js';
 
