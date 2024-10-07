@@ -1,12 +1,7 @@
-const { resolve } = require('node:path')
-const { readFile } = require('node:fs/promises')
-
 export async function fetchData() {
-  const filePath = resolve(__dirname, '../../assets/data/distributorRevenue.json')
-  
   try {
-    const rawData = await readFile(filePath)
-    const data = JSON.parse(rawData)
+    const response = await fetch('/assets/data/distributorRevenue.json')
+    const data = await response.json()
     return data
   } catch (err) {
     console.error('Erro ao ler o arquivo:', err)
