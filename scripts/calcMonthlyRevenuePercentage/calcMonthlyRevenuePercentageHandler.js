@@ -11,8 +11,6 @@ export function calcMonthlyRevenuePercentageHandler() {
   const RevenueData = parseItemsToObject(listItems)
   const RevenuePercentage = calcMonthlyRevenuePercentage(RevenueData)
   const table = generateHTMLTable({ rows: 6, cols: 2 })
-  table.rows[0].cells[0].innerText = 'Estado';
-  table.rows[0].cells[1].innerText = 'Porcentagem';
   const populatedTable = populateHTMLTable(table, RevenuePercentage)
   populatedTable.classList.add('table')
 
