@@ -275,19 +275,8 @@ input[type=number] {
   opacity: 0;
 }
 
-.lower-alpha-parentheses-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  list-style-position: inside;
-}
-
-.lower-alpha-parentheses-list li {
-  counter-increment: items;
-}
-
-.lower-alpha-parentheses-list li::marker {
-  content: counter(items, lower-alpha) ") ";
+.ul {
+  margin-left: 20px;
 }
 
 .btn {
@@ -308,9 +297,9 @@ input[type=number] {
 .btn-gupy {
   font-weight: 500;
 
-  min-width: 100px;
+  width: clamp(90px,11rem,110px);
 
-  padding: 0 24px;
+  padding: 0 1.6rem;
 
   background-color: var(--btn-primary-color);
   color: var(--btn-primary-text-color);
@@ -330,13 +319,18 @@ input[type=number] {
   border: 2px solid #eeececb4;
 }
 
-
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 20px 0 30px 0;
   font-size: 18px;
   text-align: center;
+}
+
+.table caption {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .table th, .table td {
