@@ -1,6 +1,9 @@
 export async function fetchData() {
   try {
-    const response = await fetch('/assets/data/distributorRevenue.json')
+    const response = await fetch('/assets/data/distributorRevenue.json', {
+      headers: {
+        "Content-Type": "application/json",
+      }})
     const data = await response.json()
     return data
   } catch (err) {
