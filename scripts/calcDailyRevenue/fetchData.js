@@ -1,6 +1,6 @@
 export async function fetchData() {
   try {
-    const response = await fetch('/assets/data/distributorRevenue.json', {
+    const response = await fetch('/target-estagio-dev-sao-paulo/assets/data/distributorRevenue.json', {
       headers: {
         "Content-Type": "application/json",
       }})
