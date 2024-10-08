@@ -12,6 +12,7 @@ export function calcMonthlyRevenuePercentageHandler() {
   const RevenuePercentage = calcMonthlyRevenuePercentage(RevenueData)
   const table = generateHTMLTable({ rows: 6, cols: 2 })
   const populatedTable = populateHTMLTable(table, RevenuePercentage)
+  populatedTable.insertAdjacentHTML('afterbegin', '<caption>Receita mensal por estado</caption>')
   populatedTable.classList.add('table')
 
   const output = document.querySelector('#calculatePercentageOutput')
